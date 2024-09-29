@@ -1,0 +1,16 @@
+<div class="border-bottom row"  style="margin-bottom: 16px; padding-bottom: 8px;">
+    <div class="col-11">
+        <h4>
+        
+        <div >{{job['title']}}</div>
+        </h4> 
+        
+        <div style="border: 2cm;" ></div>
+    </div>
+    <div class="col-1  d-flex align-items-center" >
+        <a href="{{ url_for('job_url', job_id=job['id']) }}" target="_blank">
+            <button type="button" class="btn btn-primary btn-lg">Code</button>
+        </a>
+    </div>
+
+</div>

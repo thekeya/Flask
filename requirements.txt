@@ -1,0 +1,2 @@
+flask
+gunicorn #when you want to put flask application to production 
