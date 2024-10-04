@@ -29,9 +29,9 @@
         .project-box {
             background-color: #1a094e; /* Slightly lighter than background */
             border-radius: 8px;
-            padding: 20px;
+           
             width: 90%; /* Adjust width to make it centered and responsive */
-            max-width: 600px; /* Limit maximum width */
+            max-width: 1200px; /* Limit maximum width */
             text-align: left;
             color: white;
         }
@@ -159,11 +159,7 @@
             background-color: #ffd600;
         }
 
-        .image-container {
-            position: relative;
-            width: 40%;
-            text-align: center;
-        }
+       
 
         .person-image {
             width: 100%;
@@ -293,9 +289,11 @@
         }
 
         .image-container {
-            position: relative;
-            width: 40%;
+            height:300px;
+            width: 50%;
+            height: auto;
             text-align: center;
+            object-fit: cover;
         }
 
         .person-image {
@@ -395,18 +393,24 @@
         .footer-bottom{
             text-align: center;
         }
+        .project-image {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 0px;
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="navbar">
-            <div class="logo">soch.</div>
+            <div class="logo"></div>
             <nav>
                 <ul>
-                    <li><a href="#">Community</a></li>
-                    <li><a href="#">Course</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#" class="login-btn">Login</a></li>
+                    <li><a href="#" class="login-btn">My Projects</a></li>
+                    <li><a href="#" class="login-btn">About</a></li>
+                   
+                    <li><a href="#" class="login-btn">Contact Me </a></li>
                 </ul>
             </nav>
         </div>
@@ -414,23 +418,13 @@
 
     <section class="main-section">
         <div class="content">
-            <h1><span class="highlight">Keya Shah:</span><br>Your Journey to Financial Independence Starts Here!</h1>
-            <p class="description">Master the Art of Freelancing by learning how to become the top 1% in your skill, landing premium clients, and earning from your passion.</p>
-            <div class="course-info">
-                <div class="info">
-                    <i class="icon">🎥</i>
-                    <p>2+ Hours of video content</p>
-                </div>
-                <div class="info">
-                    <i class="icon">📦</i>
-                    <p>13 Lessons</p>
-                </div>
-            </div>
-            <a href="#" class="cta-button">Start Learning</a>
+            <h1><span class="highlight">Keya Shah</span><br>Here to make a difference</h1>
+            
+           
         </div>
 
         <div class="image-container">
-            <img src="static\meee.jpg" alt="K Image" class="person-image">
+            <img src="{{ url_for('static', filename='meee.jpeg') }}" alt="K Image" class="person-image">
             
         </div>
     </section>
@@ -442,7 +436,7 @@
             
             <!-- Project 1 -->
             <div class="project-box">
-                <h3 class="project-title">Email Spam</h3>
+                <h3 class="project-title"><b>Email Spam</b></h3>
                 <p class="project-description">A project that filters and classifies email spam using machine learning algorithms.</p>
                 <div class="project-button">
                     <a href="https://github.com/your-username/email-spam" target="_blank">View on GitHub</a>
@@ -451,7 +445,7 @@
             
             <!-- Project 2 -->
             <div class="project-box">
-                <h3 class="project-title">Portfolio Website</h3>
+                <h3 class="project-title"><b>Portfolio Website</b></h3>
                 <p class="project-description">A personal portfolio website showcasing all my recent projects and skills.</p>
                 <div class="project-button">
                     <a href="https://github.com/your-username/portfolio-website" target="_blank">View on GitHub</a>
@@ -460,7 +454,7 @@
             
             <!-- Project 3 -->
             <div class="project-box">
-                <h3 class="project-title">Freelance Management Tool</h3>
+                <h3 class="project-title"><b></b></h3>
                 <p class="project-description">A tool to manage freelance projects, track time, and organize client communications.</p>
                 <div class="project-button">
                     <a href="https://github.com/your-username/freelance-tool" target="_blank">View on GitHub</a>
@@ -474,11 +468,15 @@
             </div>
 
             <!-- Footer bottom -->
+            <footer class="footer">
+                
+            
+            
             <div class="footer-bottom">
                 © 2024 Keya Shah
             </div>
-        </div>
-    </footer>
+        
+            </footer>
 
 </body>
 </html>
