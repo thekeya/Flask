@@ -162,8 +162,14 @@
        
 
         .person-image {
-            width: 100%;
-            border-radius: 10px;
+           
+            border-radius: 5px;
+            
+            max-width: 320px;
+            max-height: 426px;
+            height: auto;
+            object-fit: cover; 
+              
         }
 
         .affiliations {
@@ -296,10 +302,7 @@
             object-fit: cover;
         }
 
-        .person-image {
-            width: 100%;
-            border-radius: 10px;
-        }
+       
 
         .affiliations {
             position: absolute;
@@ -424,7 +427,10 @@
         </div>
 
         <div class="image-container">
-            <img src="{{ url_for('static', filename='meee.jpeg') }}" alt="K Image" class="person-image">
+        <img src="{{ url_for('static', filename='new_img.jpg') }}" alt="K Image" autoplay class="person-image" style=" width: 1000px;
+      height: 1000px;
+      ">
+           
             
         </div>
     </section>
